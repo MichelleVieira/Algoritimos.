@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <title>Banco Tário</title>
+ </head>
+ <body>
+
+
+   <script>
+
+   var nomeCorrentista= prompt("Digite seu nome e sobrenome");
+   var valorInicialConta= parseFloat (prompt("Valor inicial da conta"));
+   var valorDeposito= parseFloat (prompt("Valor do depósito por mês"));
+
+   document.write("<p>","<h2>","BANCO TÁRIO- NOVO CORRENTISTA","</h2>","</p>");
+   document.write("<p>","<h4>","Correntista:"," " +nomeCorrentista,"</h4>","</p>");
+   document.write("<p>","<h4>","Valor inicial da conta:"," ","R$" +valorInicialConta,"</h4>","</p>");
+   document.write("<p>","<h4>","Investimento mensal:"," ","R$" +valorDeposito,"</h4>","</p>");
+
+  </script>
+    
+ </body>
+</html>
+   
+ 
