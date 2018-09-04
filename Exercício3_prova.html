@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Document</title>
+    
+</head>
+<body>
+    
+         
+      <h2>Continuada 01 - 3/3</h2>
+        Personagem: <input type="text" id="personagem"> <br>
+        Caracteristica 1: <input type="text"id="carac1"><br>
+        Caracteristica 2: <input type="text"id="carac2"><br>
+        Caracteristica 3: <input type="text"id="carac3"><br>
+
+        <button onclick="minhafuncao()">Descrever Personagem</button>
+        
+        <p id="resultado">. . .</p>
+            
+    <script>
+      function minhafuncao(){
+
+          var nome= document.getElementById("personagem").value;
+          var carac1= document.getElementById("carac1").value;
+          var carac2= document.getElementById("carac2").value;
+          var carac3=document.getElementById("carac3").value;
+
+
+          var texto = "<p>Nas Crônicas de Nárnia, o(a) personagem   " +  nome  + "   é sensacional por ser :</p>";
+          texto = texto + "1)" + carac1 + "<br>";
+          texto = texto + "2)" + carac2 + "<br>";
+          texto = texto + "3)" + carac3 + "<br>";
+
+          document.getElementById("resultado").innerHTML = texto;
+
+      }
+    </script>
+    
+</body>
+</html>
+ 
+   
