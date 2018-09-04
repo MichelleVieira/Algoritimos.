@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html >
+<head>
+    
+    <title>Calcular montante</title>
+</head>
+<body>
+
+
+    <script>
+     
+     var meses= parseFloat(prompt("Digite a quantidade de meses que demorou para efetuar o pagamento:"));
+     var capital= 1275;
+     var taxa= 0.01;
+     var montante= capital * (1+ (taxa * meses));
+
+     document.write("<p>Valor do emprestimo:  " + capital,"</p>");
+     document.write("<p>Valor da taxa:  "+taxa, "</p>");
+     document.write("<p>O montante da divida é: "+ montante,"</p>");
+    
+    
+    </script>
+    
+</body>
+</html>
