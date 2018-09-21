@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>* * * Modelo * * *</title>
+</head>
+<body>
+
+    Caixa de texto de Entrada : <input type="text" id="cTIn"><br>
+
+    <button onclick="minhaFuncao()"> Texto do Botao</button>
+
+    <p id="resultado"></p>
+
+    <script>
+    function minhaFuncao(){
+        var msg= "erro!!";
+
+     document.getElementById("resultado").innerHTML = msg;
+    }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Exemplo pescador</title>
+</head>
+
+<body>
+    Peso do Peixe : <input type="number" id="pesoPeixe"> <br> 
+    
+    <button onclick = "minhafuncao()"> Multa do Dia</button>
+    
+    <p id="resultado"></p>
+
+    <script>
+        // funcao principal para calcular o valor da multa
+        function minhafuncao(){
+            var pesopeixe  = document.getElementById("pesoPeixe").value;
+            var pesoRef = 50;
+            var multaRef = 4;
+            var estado = "SP";
+            var msg = "falhou tudo";
+            var multa = 0;
+
+            if (validaPesoPeixe(pesopeixe) == true){
+                excesso = (pesopeixe - pesoRef);
+                if (excesso >= 1){
+                    multa = parseInt(excesso) * multaRef;
+                }
+                msg = "Multa = " + multa;
+            }
+            else {
+                msg = "Não sei calcular";
+            }
+            document.getElementById("resultado").innerHTML = msg;
+        }
+
+        // funcao auxiliar para validar o valor de entrada
+        function validaPesoPeixe(peso){
+
+            if ((peso > 0) && (peso <= 100))
+                return true;
+            else
+                return false;
+        }
+    
+    
+    </script>
+</body>
+</html>
