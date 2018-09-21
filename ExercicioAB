@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jogo do Maior e Menor</title>
+</head>
+<body>
+
+    Valor de A: <input type="text" id="valorA"><br>
+    <br>
+    Valor de B: <input type="text" id="valorB"><br>
+
+    <button onclick="minhaFuncao()"> Verificar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+    function minhaFuncao(){
+        var a= parseInt(document.getElementById("valorA").value);
+
+        var b= parseInt(document.getElementById("valorB").value);
+        
+        var msg= "erro!!";
+        //alert("A" + a + "B" + b);
+        
+
+        if(a>b){
+
+            msg="O valor de A  é maior que o valor de B ☺";
+        }
+        
+            if(a == b){
+                msg = "O valor de A é igual ao valor de B ☻";
+
+            }
+            
+
+             if(a < b){
+            
+            msg = "O valor de A é menor que o valor de B ☺";
+        }
+
+   
+
+     document.getElementById("resultado").innerHTML = msg;
+    }
+    </script>
+    
+</body>
+</html>
