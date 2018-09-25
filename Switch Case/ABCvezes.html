@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Frase</title>
+</head>
+<body>
+
+    Digite [a,b,c]: <input type="text" id="palpite"><br>
+
+    <button onclick="minhaFuncao()"> Ver</button>
+
+    <p id="resultadoA"></p>
+    <p id="resultadoB"></p>
+    <p id="resultadoC"></p>
+
+    <script>
+        a=0
+        b=0;
+        c=0;
+    function minhaFuncao(){
+        var msg;
+        var opcao= document.getElementById("palpite").value;
+        
+        switch (opcao) {
+            case "a":
+                   a++;
+                break;
+            case "b":
+                 b++;
+                break;
+            case "c":
+                  c++;
+                break;
+            
+            
+            default:
+             
+             msg="erro!!!";
+            
+    
+    }
+
+  
+    document.getElementById("resultadoA").innerHTML = a ;
+    document.getElementById("resultadoB").innerHTML = b ;
+    document.getElementById("resultadoC").innerHTML = c ;
+    }
+    </script>
+
+
+    
+</body>
+</html>
+        
