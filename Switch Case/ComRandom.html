@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Frase</title>
+</head>
+<body>
+
+    Tente sua sorte: <input type="text" id="palpite"><br>
+
+    <button onclick="minhaFuncao()"> Ver</button>
+
+    <p id="resultado"></p>
+
+    <script>
+    function minhaFuncao(){
+        var msg;
+        var opcao= parseInt(Math.random() * 51 + 1);
+        switch (opcao) {
+            case 1:
+                  msg= "Boa Vida ☻";
+                break;
+            case 2:
+                msg = "Você está amando ♥";
+                break;
+            case 3:
+                 msg= "Você foi traido";
+                break;
+            case 4:
+               msg= "Não estou na fossa  ☺";
+                break;
+            case 5:
+                msg= "Você nâo sabe fazer arroz";
+                break;
+            
+            default:
+             
+             msg="erro!!!";
+            
+    
+    }
+  
+    document.getElementById("resultado").innerHTML = msg;
+    
+    }
+    </script>
+
+
+    
+</body>
+</html>
+        
