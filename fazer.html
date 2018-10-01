@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Tinder Geek</title>
+</head>
+<h3>Tinder Geek</h3>
+
+<body>
+
+    Qual seu nível de conversa:
+    <input type="number" id="conversa"> (0-10)
+    <br>
+    <br> Quantos livros já leu:
+    <input type="number" id="livros"> (minimo 0)
+    <br>
+    <br> Quantos jogos de celular, playstation ou xbox já jogou:
+    <input type="number" id="jogos"> (minimo 0)
+    <br>
+    <br> Quantos namorados(as) ou ficantes já teve:
+    <input type="number" id="namorados"> (minimo 0)
+    <br>
+
+
+    <button onclick="minhafuncao()">Analisar Perfil</button>
+    <br> Boa de conversa?
+    <slan id="resultado"></slan>
+
+
+    <script>
+        // funcao principal para calcular o valor da multa
+        function minhafuncao() {
+            var conversa = document.getElementById("conversa").value;
+            var livros = document.getElementById("livros").value;
+            var jogos = document.getElementById("jogos").value;
+            var namorados = document.getElementById("namorados").value;
+            var sim = "SIM";
+            var nao = "NÃO";
+            var msg;
+            if(conversa<0||conversa>10||livros<0||livros>50||jogos<0||jogos>500||namorados<0||namorados>12){
+                msg=Alert("erro")
+            }
+            else{
+                if(conversa>=6){
+                    document.getElementById(resultado).innerHTML=sim
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>
