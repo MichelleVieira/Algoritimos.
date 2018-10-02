@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Tinder Geek</title>
+</head>
+<h3>Tinder Geek</h3>
+
+<body>
+
+    Qual seu nível de conversa:
+    <input type="number" id="conversa"> (0-10)
+    <br>
+    <br> Quantos livros já leu:
+    <input type="number" id="livros"> (minimo 0)
+    <br>
+    <br> Quantos jogos de celular, playstation ou xbox já jogou:
+    <input type="number" id="jogos"> (minimo 0)
+    <br>
+    <br> Quantos namorados(as) ou ficantes já teve:
+    <input type="number" id="namorados"> (minimo 0)
+    <br>
+
+
+    <button onclick="minhafuncao()">Analisar Perfil</button>
+    <br> 
+     <h3>RELATÓRIO</h3>
+     <br> 
+    Boa de conversa ? <slan id="resultado"></slan><br> 
+    <br>
+    Culta ? <slan id="resultado1"></slan><br> 
+    <br> 
+    Curte um videogame ? <slan id="resultado2"></slan><br> 
+    <br> 
+    Difícil de conquistar ? <slan id="resultado3"></slan><br> 
+    <br> 
+    Boa de conversa e culta ? <slan id="resultado4"></slan><br> 
+    <br> 
+    Boa de conversa e curte um videogame? <slan id="resultado5"></slan><br> 
+    <br> 
+    Não é culta e ainda é difícil (tá dificil pra essa pessoa, hein)? <slan id="resultado6"></slan><br> 
+    <br> 
+    Veredito: Para eu marcar um encontro deve ser boa de conversa, culta mas não difícil de 
+    conquistar ou difícil de conquistar e curtir um videogame. É o caso? <slan id="resultado7"></slan>
+    <script>
+        function minhafuncao() {
+            var conversa = document.getElementById("conversa").value;
+            var livros = document.getElementById("livros").value;
+            var jogos = document.getElementById("jogos").value;
+            var namorados = document.getElementById("namorados").value;
+            var sim = "SIM";
+            var nao = "NÃO";
+            var msg;
+
+             if(((conversa<0)||(conversa>10))||((livros<0)||(livros>50))||((jogos<0)||(jogos>500))||((namorados<0) || (namorados>12))){
+                msg= alert("Erro!! Digite números validos");
+           
+            }else{
+
+            
+                if(conversa>=6){
+                    document.getElementById("resultado").innerHTML=sim;
+                }else {
+                    document.getElementById("resultado").innerHTML=nao;
+
+                }
+                if(livros>=10){
+                    document.getElementById("resultado1").innerHTML=sim;
+                }else{
+                    document.getElementById("resultado1").innerHTML=nao;
+                }
+                if(jogos>=10 ){
+                    document.getElementById("resultado2").innerHTML=sim;
+                }else{
+                    document.getElementById("resultado2").innerHTML=nao;
+                }
+                if(namorados<3){
+                    document.getElementById("resultado3").innerHTML=sim;
+
+                }else{
+                    document.getElementById("resultado3").innerHTML=nao;
+
+                }
+                if((conversa>=6) &&(livros>=10)){
+
+                 document.getElementById("resultado4").innerHTML=sim;
+
+                }else{
+                    document.getElementById("resultado4").innerHTML=nao;
+
+                }
+                if((conversa>=6)&& (jogos>=10)){
+                    document.getElementById("resultado5").innerHTML=sim;
+
+                }else{
+                    document.getElementById("resultado5").innerHTML=nao;
+
+                }
+                if((livros<10) && (namorados<3)){
+                    document.getElementById("resultado6").innerHTML=sim;
+
+                 }else{
+                    document.getElementById("resultado6").innerHTML=nao;
+
+                 }
+                 if(((conversa>=6) && (livros>=10) && (namorados>=3)) || (namorados<3) && (jogos>=10)){
+                 
+                    document.getElementById("resultado7").innerHTML=sim;
+
+                 }else{
+                    document.getElementById("resultado7").innerHTML=nao;
+
+                 } 
+            }
+                    
+                 }
+                
+            
+
+                
+            
+        
+    </script>
+</body>
+
+</html>
