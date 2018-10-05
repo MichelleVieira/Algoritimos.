@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Atleta 4.0</title>
+</head>
+<h3>Atleta 4.0</h3>
+
+<body>
+
+    Qual seu nível de força:
+    <input type="number" id="forca"> (0-10)
+    <br>
+    <br>Valor de oxigenação:
+    <input type="number" id="oxigenio"> (0-100)
+    <br>
+    <br> Quantos esportes pratica?
+    <input type="number" id="esportes"> (minimo 0)
+    <br>
+    <br>   Quantas medalhas já ganhou?
+    <input type="number" id="medalhas"> (minimo 0)
+    <br>
+
+
+    <button onclick="minhafuncao()">Analisar Atleta</button>
+    <br> 
+     <h3>Atleta 4.0 - Perfil</h3>
+     <br> 
+     Forte? <slan id="resultado"></slan><br> 
+    <br>
+    Bom de Corrida? <slan id="resultado1"></slan><br> 
+    <br> 
+    É Sub Atleta? <slan id="resultado2"></slan><br> 
+    <br> 
+    É Super Competidor? <slan id="resultado3"></slan><br> 
+    <br> 
+    Forte e Bom de Corrida? <slan id="resultado4"></slan><br> 
+    <br> 
+    Forte e Sub Atleta? <slan id="resultado5"></slan><br> 
+    <br> 
+    Não é bom de corrida e ainda é Sub Atleta? <slan id="resultado6"></slan><br> 
+    <br> 
+    Veredito: Para ser um atleta do futuro tem que ser forte, bom de corrida, não ser sub atleta e ser super competidor. É o caso? <slan id="resultado7"></slan>
+    <script>
+        function minhafuncao() {
+            var forca = document.getElementById("forca").value;
+            var oxigenio = document.getElementById("oxigenio").value;
+            var esportes = document.getElementById("esportes").value;
+            var medalhas = document.getElementById("medalhas").value;
+            var sim = "SIM";
+            var nao = "NÃO";
+            var msg;
+             if(((forca<0)||(forca>10))||((oxigenio<0)||(oxigenio>100))||((esportes<0)||(esportes>50))||((medalhas<0) || (medalhas>50))){
+                msg= alert("Erro!! Digite números validos");
+           
+            }else{
+            
+                if(forca>6){
+                    document.getElementById("resultado").innerHTML=sim;
+                }else {
+                    document.getElementById("resultado").innerHTML=nao;
+                }
+                if(oxigenio>=70){
+                    document.getElementById("resultado1").innerHTML=sim;
+                }else{
+                    document.getElementById("resultado1").innerHTML=nao;
+                }
+                if(esportes<5 ){
+                    document.getElementById("resultado2").innerHTML=sim;
+                }else{
+                    document.getElementById("resultado2").innerHTML=nao;
+                }
+                if(medalhas>4){
+                    document.getElementById("resultado3").innerHTML=sim;
+                }else{
+                    document.getElementById("resultado3").innerHTML=nao;
+                }
+                if((forca>6) &&(oxigenio>=70)){
+                 document.getElementById("resultado4").innerHTML=sim;
+                }else{
+                    document.getElementById("resultado4").innerHTML=nao;
+                }
+                if((forca>6)&& (esportes<5)){
+                    document.getElementById("resultado5").innerHTML=sim;
+                }else{
+                    document.getElementById("resultado5").innerHTML=nao;
+                }
+                if((oxigenio<=70) && (esportes<5)){
+                    document.getElementById("resultado6").innerHTML=sim;
+                 }else{
+                    document.getElementById("resultado6").innerHTML=nao;
+                 }
+                 if((forca>=6) && (oxigenio>=70) && (esportes>5) && (medalhas>4) ){
+                 
+                    document.getElementById("resultado7").innerHTML=sim;
+                 }else{
+                    document.getElementById("resultado7").innerHTML=nao;
+                 } 
+            }
+                    
+                 }
+                
+               
+                
+            
+        
+    </script>
+</body>
+
+</html>
