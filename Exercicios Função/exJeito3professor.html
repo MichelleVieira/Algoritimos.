@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+<body>
+
+       Numero <input type="text" id="cTIn"><br>
+        <br>
+    
+
+    <button onclick="dobro()"> dobro</button><br>
+    <br>
+    <button onclick="triploX()"> Triplo</button><br>
+    <br>
+    <button onclick="metade()"> metade</button><br>
+    <br>
+   
+   
+    <p id="resultado"></p>
+
+    <script>
+        var numero = parseInt(
+            document.getElementById("cTIn").value
+        )
+       
+      
+        
+    function minhaFuncao(){
+        var msg= "erro!";
+
+ document.getElementById("resultado").innerHTML = msg;  
+     
+     
+    }
+    function dobro(){
+
+    return valor * 2;
+    }
+
+    function metade(){
+        
+        return valor / 2;
+     }
+     
+    
+    function triploX(){
+
+        return valor * 3;
+
+
+    }
+    
+
+     
+    
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+<body>
+
+    
+    
+
+    <button onclick="minhaFuncao()"> Testar funcao</button><br>
+    <br>
+
+    Resultado (dobro):<p id="resultado"></p>
+
+    <script>
+        
+    function minhaFuncao(){
+        var msg= "erro!";
+
+        msg= dobro(5);
+        msg= metade(1000);
+        
+        
+
+
+      document.getElementById("resultado").innerHTML = msg;  
+     
+    }
+    function dobro(valor){
+
+      return valor * 2;
+    }
+
+    function metade(valor){
+        
+        return valor / 2;
+    }
+    
+    
+    </script>
+    
+</body>
+</html>

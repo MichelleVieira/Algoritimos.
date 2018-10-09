@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+<body>
+
+    
+    Dobro: <input type="number" id="num"><br>
+    <br>
+
+    <button onclick="minhaFuncao()"> Testar funcao</button><br>
+    <br>
+
+    Resultado (dobro):<p id="resultado"></p>
+
+    <script>
+        
+    function minhaFuncao(){
+        var valor=document.getElementById("num").value;
+        var msg= "erro!";
+        var msg= valor * 2;
+        
+
+
+      document.getElementById("resultado").innerHTML = msg;  
+     
+    }
+    function dobro(valor){
+
+      return valor * 2;
+    }
+    
+    
+    </script>
+    
+</body>
+</html>
