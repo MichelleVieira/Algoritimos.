@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+<body>
+
+       Digite um valor para A:<input type="text" id="cTIn"><br>
+       <br>
+       Digite um valor para B:<input type="text" id="cT"><br>
+       <br>
+    
+
+    <button onclick="equacao()"> resultado</button><br>
+    <br>
+    
+   
+   
+    <p id="resultado"></p>
+
+    <script>
+     
+        
+   function exibeResultado(msg){
+
+    document.getElementById("resultado").innerHTML = msg;
+       }
+
+
+    function getNumeroa(){
+
+     return parseInt(document.getElementById("cTIn").value);
+
+      }
+
+      function getNumerob(){
+
+     return parseInt(document.getElementById("cT").value);
+
+       }
+  
+     
+     
+    
+    function equacao(){
+
+        exibeResultado( ((-getNumerob())/getNumeroa()));
+
+   }
+
+</script>
+    
+</body>
+</html>
