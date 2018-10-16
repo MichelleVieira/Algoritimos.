@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jogo das equações</title>
+</head>
+<body>
+
+    A: <input type="text" id="cTInA"><br>
+    <br>
+    B: <input type="text" id="cTInB"><br>
+    <br>
+
+    <button onclick="minhaFuncao()"> jogar </button>
+
+    <p id="resultado"></p>
+
+    <script>
+    function exibeResultado(msg){
+    
+     document.getElementById("resultado").innerHTML = msg; //funcão que representa entrada e saida de dados
+
+     
+    }
+    function getNumeroFloat(id) {
+        return parseFloat(
+            document.getElementById(id).value  //funcão que representa entrada e saida de dados
+        );
+    }
+    function defineC(){
+    return Math.random()*1001.1; //defeito... função ligada a equação (calcula C)
+    }
+    function defineDelta(a,b,c){
+
+        return (b * b)- 4 * a * c;  //função ligada a equação (calcula delta )
+                                    
+    }
+    function minhaFuncao(){
+
+        var a= getNumeroFloat("cTInA");
+        var b= getNumeroFloat("cTInB");    //declaração de variaveis 
+        var c= defineC();
+
+        var delta = defineDelta(a,b,c); //Definção do delta
+
+        if(delta>0){
+                                               // Estrutura de condição
+            exibeResultado(a + "x ^ 2" + b + "x" + c +" =0" + " :-)");
+        } else{
+            exibeResultado(":-(");
+        }
+    }
+    </script>
+    
+</body>
+</html>
