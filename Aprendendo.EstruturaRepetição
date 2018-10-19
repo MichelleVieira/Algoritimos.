@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1)  desenvolver um programa que leia 10 números e exiba o seu dobro. Usando for, while e do while -->
+
+    <script>
+
+        var i=0;
+      
+        var numero;
+           
+           //com for 
+          
+          //for (i=0; i <=10; i++) {
+
+             //numero = prompt("Digite o numero" + i + ":");
+             //alert( numero * 2);
+
+             
+       // }
+       // if(i>10){
+
+           // alert("Deu por hoje :-)");
+        //}
+       
+
+    // com while
+    
+    //while(i < 10){
+        //numero= prompt("Digite o numero");
+        //alert( numero * 2);
+       // i++;
+    //}
+    
+    do{
+        numero= prompt("Digite o numero");
+        alert( numero * 2);
+        i++;
+    }while( i< 5);
+   
+
+    
+    </script>
+
+  
+    
+</body>
+</html>
