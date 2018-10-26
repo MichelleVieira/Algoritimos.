@@ -1,0 +1,47 @@
+<!-- 3) Faça um jogo de par ou impar, no qual o jogador informa um número entre 0..5 e o computador sorteia um 
+    outro número entre 0..5. E indique quem venceu. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jogo PAR OU IMPAR</title>
+</head>
+<body>
+
+    <script>
+    
+     var numero = parseInt(prompt("Digite um numero entre 0 e 5"));
+     var num = parseInt(Math.random()*5+1);
+     var soma = numero + num  ;
+     
+     if((numero < 0 ) || ( numero > 5)) {
+          alert("Digite um numero valido !! ");
+      } else{
+           
+        if(soma  % 2 == 0){
+
+            
+            document.write("<h3> Parabéns, você venceu !!! </h3>");
+            document.write("<p>Numero Digitado: " + numero  +"</p>");
+            document.write(" <p> Resultado da soma: " + soma +  " (Par)" + "</p>" ); 
+         
+        }
+    
+        else{
+
+            document.write("<h3>Computador Venceu ! </h3>");
+            document.write("<p>Numero Digitado: " + numero + "</p>");
+            document.write("<p> Resultado da soma: " + soma  + " (Impar)" + "<p>"); 
+        
+
+       }
+      }
+       
+       
+     </script>
+    
+</body>
+</html>
