@@ -1,0 +1,47 @@
+<!-- 1)O sistema de medição de temperaturas da cidade de Flocsberg precisa de um sistema que recebe 6 valores 
+de temperatura de sensores dispostos em pontos estratégicos da cidade. Você precisa receber estes valores 
+e mostrar a temperatura média da cidade. Mostrar a maior temperatura e a menor temperatura, isso uma vez ao dia. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flocsberg</title>
+</head>
+<body>
+     
+    <p id="resultado"></p>
+    
+
+    <script>
+
+    var temperatura= [];
+    var soma= 0;
+    var i;
+
+    for(i=0; i<=6; i++){
+
+        temperatura[i]= parseFloat(prompt("Digite a temperatura"));
+        soma+=temperatura[i];
+    }
+    temperatura.sort(function(a,b){return a-b})
+
+    var media= soma/6;
+
+    document.getElementById("resultado").innerHTML= "Media: " + media +  "<br>" +
+    "Menor: " + temperatura[0] + "<br>" + "Maior: " + temperatura[5] + "<br>";
+   
+    
+    
+       
+
+  </script>
+</body>
+
+</html>
+
+      
+
+
