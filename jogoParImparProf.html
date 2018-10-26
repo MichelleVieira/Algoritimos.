@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jogo Par ou Impar</title>
+</head>
+<body>
+
+    
+
+    Digite um numero: <input type="text" id="palpiteJ"><br>
+
+    <br>
+
+    <button onclick="jogar()"> jogar </button>
+
+    <p id="resultado"></p>
+
+    <script>
+
+    function exibeResultado(msg){
+     document.getElementById("resultado").innerHTML = msg;
+    }
+    function getValor(id){
+        return document.getElementById(id).value;
+
+    }
+    function jogar(){
+        msg="ERRO";
+    
+
+        var jogador= parseInt(getValor("palpiteJ"));
+
+        if (jogador>= 0 && jogador <= 5){
+        var computador = parseInt( Math.random() *5);
+         var msg= " O jogador colocou: " + jogador + " dedos <br>" + " O computador colocou: " + computador + " dedos <br>" +
+        "O ganhador foi o : ";
+
+
+        var soma = jogador + computador;
+
+       if(soma % 2 == 0){
+
+           msg = msg + "<h3>Jogador </h3>";
+       } else{
+
+        msg = msg + "<h3>Computador</h3>";
+       }
+        }
+        else{
+            msg= "Jogador, só coloque dedos entre 0...5!!!";
+        }
+
+       exibeResultado(msg);
+    }
+    </script>
+    
+</body>
+</html>
