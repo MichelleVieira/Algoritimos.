@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+<body>
+
+        <button onclick = "minhaFuncao()">Emitir ticket</button>
+
+        <p id="resultado"></p>
+
+
+    <script>
+
+
+     function minhaFuncao(){
+      
+      var idade = [];
+      var sexo = [];
+      var i=0;
+      var msg= "";
+
+      for(i=0; i<21; i++){
+
+          idade[i]= prompt("Digite sua idade:");
+          sexo[i]= prompt("Digite o seu sexo:");
+
+          alert(idade[i] +"     "+ sexo[i]);
+
+      }
+      }
+     
+      </script>
+    
+</body>
+</html>
